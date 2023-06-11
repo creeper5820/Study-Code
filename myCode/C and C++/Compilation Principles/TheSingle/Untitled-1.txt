@@ -1,0 +1,546 @@
+//function(){document.getElementById("pj0601id_6_1").click()}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link href="/njlgdx/framework/images/common.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/njlgdx/js/jquery-min.js" language="javascript" ></script>
+	<script type="text/javascript" src="/njlgdx/js/common.js"></script>
+</head>
+
+
+
+<head id="headerid1">
+	<base target='_self'>
+	<title>学生评教</title>	
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="keywords" content="湖南强智科技教务系统">
+	<meta http-equiv="description" content="湖南强智科技教务系统">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<script type="text/javascript" src="/njlgdx/js/jquery-min.js" language="javascript" ></script>
+<script type="text/javascript" src="/njlgdx/js/common.js" language="javascript" ></script>
+<script type="text/javascript" src="/njlgdx/js/iepngfix_tilebg.js" language="javascript" ></script>
+<link href="/njlgdx/framework/images/common.css" rel="stylesheet" type="text/css" />
+<link href="/njlgdx/framework/images/blue.css" rel="stylesheet" type="text/css" id="link_theme" />
+<link href="/njlgdx/framework/images/workstation.css" rel="stylesheet" type="text/css" />
+</head>
+<iframe id="notSession" name="notSession" style="display: none;" src=""></iframe>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	window.setInterval(function(){
+		 document.getElementById("notSession").src = "/njlgdx/framework/blankPage.jsp";
+	 }, 1000 * 60 * 10);
+});
+</script>
+ 
+<body style="text-align: left; margin: 0px; width: 98%">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" id="tab1">
+		<tr>
+			<td class="toolstitle" align="left">学生评教</td>
+		</tr>
+	</table>
+	<div class="Nsb_pw" style="text-align: left; width: 90%;">
+		<table cellpadding="0" cellspacing="0" width="100%"> 
+			<tr>
+				<td style="color:blue;font-size:12px;">
+					<b></b>&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<table  width="100%" cellspacing="0" cellpadding="0" class="Nsb_r_list Nsb_table" >
+			<tr align="left">
+				<th class="Nsb_r_list_thb">
+					
+					
+						课程名称：大学生心理健康教育指导 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评教大类：学生评教
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 总评分: 0
+					
+				</th>
+			</tr>
+		</table>
+		
+		<iframe name="ifrmHidden" id="ifrmHidden" style="display: none;"　></iframe>
+		
+		<form method="post" name="Form1" id="Form1" action="/njlgdx/xspj/xspj_save.do" target="ifrmHidden">
+			<input type="hidden" name="issubmit" id="issubmit" value="0" />
+			<input type="hidden" name="pj09id" value="FCF8C46EBBA33CB8E053725177CAA11B" />
+			<input type="hidden" name="pj01id" value="906B0BB1EB7C435EB53DF74696416519" />
+			<input type="hidden" name="pj0502id" value="F6F57C057D874422A99CDD34F87C2482" />
+			<input type="hidden" name="jg0101id" value="E8F6E545CBBA443FBD1A2D7680F4E656" />
+			<input type="hidden" name="jx0404id" value="202220232004526" />
+			<input type="hidden" name="xsflid" value="" />
+			<input type="hidden" name="xnxq01id" value="2022-2023-2" />
+			<input type="hidden" name="jx02id" value="E204D60764C5427C8E9AA4B49D2CAA93" />
+			<input type="hidden" name="pj02id" value="1EAAA2604C67430E8F1E3F9632F842B2" />
+			
+			<table id="table1" cellspacing="0" class="Nsb_r_list Nsb_table">
+				<tr>
+					<th align="center" width="50%" class="Nsb_r_list_thb">
+						评价指标（权重）
+					</th>
+					<th align="center" class="Nsb_r_list_thb">
+						评价选项
+					</th>
+				</tr>
+			
+			<!-- 显示一级指标情况 -->	
+			
+			
+			<!-- 不显示一级指标情况 -->	
+			
+				
+				<tr>
+					<td>
+						将社会主义核心价值观融入教学，把正确世界观、人生观和价值观培养贯穿于教学全过程
+						<input type="hidden" name="pj06xh" value="6">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_6" id="pj0601id_6_1"
+									value="91835CAF44D64EDF83DB82E9FFB85B82" > 很符合
+							<input type="hidden" name="pj0601fz_6_91835CAF44D64EDF83DB82E9FFB85B82" value="10">
+						
+							<input type="radio" name="pj0601id_6" id="pj0601id_6_2"
+									value="A091FE47A9FE4D1C8F90B6AC43B42652" > 较符合
+							<input type="hidden" name="pj0601fz_6_A091FE47A9FE4D1C8F90B6AC43B42652" value="8">
+						
+							<input type="radio" name="pj0601id_6" id="pj0601id_6_3"
+									value="B27ABE0DB3BC441FBADCA36394EFF942" > 一般
+							<input type="hidden" name="pj0601fz_6_B27ABE0DB3BC441FBADCA36394EFF942" value="6">
+						
+							<input type="radio" name="pj0601id_6" id="pj0601id_6_4"
+									value="FD26E599E2B04E6ABC5808C6A289D32B" > 不符合
+							<input type="hidden" name="pj0601fz_6_FD26E599E2B04E6ABC5808C6A289D32B" value="4">
+						
+							<input type="radio" name="pj0601id_6" id="pj0601id_6_5"
+									value="45479ABCEB7D4ECFAC5179383CB39E51" > 极不符合
+							<input type="hidden" name="pj0601fz_6_45479ABCEB7D4ECFAC5179383CB39E51" value="2">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						讲课中不做与教学无关的事，准时上下课，不随意调、停课
+						<input type="hidden" name="pj06xh" value="3">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_3" id="pj0601id_3_1"
+									value="B74F6FC4FF014373A81603C939AC9DBD" > 很符合
+							<input type="hidden" name="pj0601fz_3_B74F6FC4FF014373A81603C939AC9DBD" value="8">
+						
+							<input type="radio" name="pj0601id_3" id="pj0601id_3_2"
+									value="09471C271099403980F5B001C52D859B" > 较符合
+							<input type="hidden" name="pj0601fz_3_09471C271099403980F5B001C52D859B" value="6.4">
+						
+							<input type="radio" name="pj0601id_3" id="pj0601id_3_3"
+									value="8803ECA408504FFCAEB677DF5221E421" > 一般
+							<input type="hidden" name="pj0601fz_3_8803ECA408504FFCAEB677DF5221E421" value="4.8">
+						
+							<input type="radio" name="pj0601id_3" id="pj0601id_3_4"
+									value="C53CD2C1631D41C086D223C2E8A9186F" > 不符合
+							<input type="hidden" name="pj0601fz_3_C53CD2C1631D41C086D223C2E8A9186F" value="3.2">
+						
+							<input type="radio" name="pj0601id_3" id="pj0601id_3_5"
+									value="0A3B176E795244EB92A3ADAE80967323" > 极不符合
+							<input type="hidden" name="pj0601fz_3_0A3B176E795244EB92A3ADAE80967323" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						公布课程教学安排及考核方式，学习要求明确
+						<input type="hidden" name="pj06xh" value="7">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_7" id="pj0601id_7_1"
+									value="146F4A55F6AE46299FF58F839EE2770C" > 很符合
+							<input type="hidden" name="pj0601fz_7_146F4A55F6AE46299FF58F839EE2770C" value="8">
+						
+							<input type="radio" name="pj0601id_7" id="pj0601id_7_2"
+									value="2502ADB76C9E40ECB3488C08E40C5814" > 较符合
+							<input type="hidden" name="pj0601fz_7_2502ADB76C9E40ECB3488C08E40C5814" value="6.4">
+						
+							<input type="radio" name="pj0601id_7" id="pj0601id_7_3"
+									value="5625360C06D94B3A8C2992E2FA8FBBFC" > 一般
+							<input type="hidden" name="pj0601fz_7_5625360C06D94B3A8C2992E2FA8FBBFC" value="4.8">
+						
+							<input type="radio" name="pj0601id_7" id="pj0601id_7_4"
+									value="EA9D37409B57454D8376C6F97EB73DB2" > 不符合
+							<input type="hidden" name="pj0601fz_7_EA9D37409B57454D8376C6F97EB73DB2" value="3.2">
+						
+							<input type="radio" name="pj0601id_7" id="pj0601id_7_5"
+									value="D2A2C46C03EB44E8B7410590588A4DFE" > 极不符合
+							<input type="hidden" name="pj0601fz_7_D2A2C46C03EB44E8B7410590588A4DFE" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						熟悉授课内容，讲解清楚、准确
+						<input type="hidden" name="pj06xh" value="5">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_5" id="pj0601id_5_1"
+									value="737DE5C0B2124449AA3CED66D9C9BF84" > 很符合
+							<input type="hidden" name="pj0601fz_5_737DE5C0B2124449AA3CED66D9C9BF84" value="8">
+						
+							<input type="radio" name="pj0601id_5" id="pj0601id_5_2"
+									value="1CC807BF9F914A2EA8DFFF12C6BC7D37" > 较符合
+							<input type="hidden" name="pj0601fz_5_1CC807BF9F914A2EA8DFFF12C6BC7D37" value="6.4">
+						
+							<input type="radio" name="pj0601id_5" id="pj0601id_5_3"
+									value="DD7729B270334F5599C81EFE735C0533" > 一般
+							<input type="hidden" name="pj0601fz_5_DD7729B270334F5599C81EFE735C0533" value="4.8">
+						
+							<input type="radio" name="pj0601id_5" id="pj0601id_5_4"
+									value="F05805558EC44FDBA0402E89444DA519" > 不符合
+							<input type="hidden" name="pj0601fz_5_F05805558EC44FDBA0402E89444DA519" value="3.2">
+						
+							<input type="radio" name="pj0601id_5" id="pj0601id_5_5"
+									value="3E5B1A0C4EC24C22AB9090F8EE7D8D57" > 极不符合
+							<input type="hidden" name="pj0601fz_5_3E5B1A0C4EC24C22AB9090F8EE7D8D57" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						经常补充新材料和新内容，有自己的理解和对问题的阐述方式
+						<input type="hidden" name="pj06xh" value="9">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_9" id="pj0601id_9_1"
+									value="F97CDF8FFADD45E789EB94839C66C2BC" > 很符合
+							<input type="hidden" name="pj0601fz_9_F97CDF8FFADD45E789EB94839C66C2BC" value="8">
+						
+							<input type="radio" name="pj0601id_9" id="pj0601id_9_2"
+									value="0A338EC3F9554F5AA46A18ECAD839ED5" > 较符合
+							<input type="hidden" name="pj0601fz_9_0A338EC3F9554F5AA46A18ECAD839ED5" value="6.4">
+						
+							<input type="radio" name="pj0601id_9" id="pj0601id_9_3"
+									value="085CA074C1394BB4A53769CEF7D592BD" > 一般
+							<input type="hidden" name="pj0601fz_9_085CA074C1394BB4A53769CEF7D592BD" value="4.8">
+						
+							<input type="radio" name="pj0601id_9" id="pj0601id_9_4"
+									value="3E780E64F88C47B69E50674D120C2B72" > 不符合
+							<input type="hidden" name="pj0601fz_9_3E780E64F88C47B69E50674D120C2B72" value="3.2">
+						
+							<input type="radio" name="pj0601id_9" id="pj0601id_9_5"
+									value="A9841DB61964480D9E024C1EABBC1B89" > 极不符合
+							<input type="hidden" name="pj0601fz_9_A9841DB61964480D9E024C1EABBC1B89" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						灵活应用案例、讨论等多种教学方法，教学生动，很好地激发学习兴趣
+						<input type="hidden" name="pj06xh" value="2">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_2" id="pj0601id_2_1"
+									value="B5512B855ABC40F4869531FFE1AFA1C0" > 很符合
+							<input type="hidden" name="pj0601fz_2_B5512B855ABC40F4869531FFE1AFA1C0" value="8">
+						
+							<input type="radio" name="pj0601id_2" id="pj0601id_2_2"
+									value="FBEEEDDB402F4AC09191846B0B0E98BA" > 较符合
+							<input type="hidden" name="pj0601fz_2_FBEEEDDB402F4AC09191846B0B0E98BA" value="6.4">
+						
+							<input type="radio" name="pj0601id_2" id="pj0601id_2_3"
+									value="8544FF673FEA45A39C5D90E3045EF309" > 一般
+							<input type="hidden" name="pj0601fz_2_8544FF673FEA45A39C5D90E3045EF309" value="4.8">
+						
+							<input type="radio" name="pj0601id_2" id="pj0601id_2_4"
+									value="533ED7039AB64F7C81F0F0281D9E9BD3" > 不符合
+							<input type="hidden" name="pj0601fz_2_533ED7039AB64F7C81F0F0281D9E9BD3" value="3.2">
+						
+							<input type="radio" name="pj0601id_2" id="pj0601id_2_5"
+									value="AC8212E4AD224A98BEADB0F04BE9FB44" > 极不符合
+							<input type="hidden" name="pj0601fz_2_AC8212E4AD224A98BEADB0F04BE9FB44" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						课后安排辅导，愿意解答来自学生各种形式有关课程的询问
+						<input type="hidden" name="pj06xh" value="11">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_11" id="pj0601id_11_1"
+									value="955F8E44AB0944FCAD65C3D1A35DB31D" > 很符合
+							<input type="hidden" name="pj0601fz_11_955F8E44AB0944FCAD65C3D1A35DB31D" value="8">
+						
+							<input type="radio" name="pj0601id_11" id="pj0601id_11_2"
+									value="BEB255E4CFED4D9F8D12048199D79540" > 较符合
+							<input type="hidden" name="pj0601fz_11_BEB255E4CFED4D9F8D12048199D79540" value="6.4">
+						
+							<input type="radio" name="pj0601id_11" id="pj0601id_11_3"
+									value="1D3EF239D2BA4A38BFEE13D13810E51B" > 一般
+							<input type="hidden" name="pj0601fz_11_1D3EF239D2BA4A38BFEE13D13810E51B" value="4.8">
+						
+							<input type="radio" name="pj0601id_11" id="pj0601id_11_4"
+									value="DD9CB6F4A44346F38829F387794657B0" > 不符合
+							<input type="hidden" name="pj0601fz_11_DD9CB6F4A44346F38829F387794657B0" value="3.2">
+						
+							<input type="radio" name="pj0601id_11" id="pj0601id_11_5"
+									value="CCE6F8942DB045D19688EC46A854D27B" > 极不符合
+							<input type="hidden" name="pj0601fz_11_CCE6F8942DB045D19688EC46A854D27B" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						鼓励学生质疑，大胆表达思想
+						<input type="hidden" name="pj06xh" value="12">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_12" id="pj0601id_12_1"
+									value="B71BB78F94CF4658BE128FD2CA2D0B5A" > 很符合
+							<input type="hidden" name="pj0601fz_12_B71BB78F94CF4658BE128FD2CA2D0B5A" value="8">
+						
+							<input type="radio" name="pj0601id_12" id="pj0601id_12_2"
+									value="D3EFF4D1E7CA4857A15FB3505A6BF4B4" > 较符合
+							<input type="hidden" name="pj0601fz_12_D3EFF4D1E7CA4857A15FB3505A6BF4B4" value="6.4">
+						
+							<input type="radio" name="pj0601id_12" id="pj0601id_12_3"
+									value="FC76AC38ADA6411190A1871DD7D39001" > 一般
+							<input type="hidden" name="pj0601fz_12_FC76AC38ADA6411190A1871DD7D39001" value="4.8">
+						
+							<input type="radio" name="pj0601id_12" id="pj0601id_12_4"
+									value="545AF1D4FEBB4CD1BA156FDE61A5E1CA" > 不符合
+							<input type="hidden" name="pj0601fz_12_545AF1D4FEBB4CD1BA156FDE61A5E1CA" value="3.2">
+						
+							<input type="radio" name="pj0601id_12" id="pj0601id_12_5"
+									value="64DA79D59C944B52BFBDC84EF28FE1D8" > 极不符合
+							<input type="hidden" name="pj0601fz_12_64DA79D59C944B52BFBDC84EF28FE1D8" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						作业量适当，有利于巩固所学知识
+						<input type="hidden" name="pj06xh" value="10">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_10" id="pj0601id_10_1"
+									value="66241628A8634BA29CC56A77822B0877" > 很符合
+							<input type="hidden" name="pj0601fz_10_66241628A8634BA29CC56A77822B0877" value="8">
+						
+							<input type="radio" name="pj0601id_10" id="pj0601id_10_2"
+									value="28B40DB02222422FBE23D1C96DE9BDBF" > 较符合
+							<input type="hidden" name="pj0601fz_10_28B40DB02222422FBE23D1C96DE9BDBF" value="6.4">
+						
+							<input type="radio" name="pj0601id_10" id="pj0601id_10_3"
+									value="E2C865C68B064EFD8FFB9E9CE4691AA8" > 一般
+							<input type="hidden" name="pj0601fz_10_E2C865C68B064EFD8FFB9E9CE4691AA8" value="4.8">
+						
+							<input type="radio" name="pj0601id_10" id="pj0601id_10_4"
+									value="CA8BBC9C16114442A7163483FDC36B71" > 不符合
+							<input type="hidden" name="pj0601fz_10_CA8BBC9C16114442A7163483FDC36B71" value="3.2">
+						
+							<input type="radio" name="pj0601id_10" id="pj0601id_10_5"
+									value="49B0A61FD4F14058BF5F2DFF5F1C5DEE" > 极不符合
+							<input type="hidden" name="pj0601fz_10_49B0A61FD4F14058BF5F2DFF5F1C5DEE" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						作业批改认真，讲解及时，对学习很有帮助
+						<input type="hidden" name="pj06xh" value="8">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_8" id="pj0601id_8_1"
+									value="63A07282B0CF4634B43172E8E53E0091" > 很符合
+							<input type="hidden" name="pj0601fz_8_63A07282B0CF4634B43172E8E53E0091" value="8">
+						
+							<input type="radio" name="pj0601id_8" id="pj0601id_8_2"
+									value="1DF6A2378A0F4BE9A8AF9C17F6B69B57" > 较符合
+							<input type="hidden" name="pj0601fz_8_1DF6A2378A0F4BE9A8AF9C17F6B69B57" value="6.4">
+						
+							<input type="radio" name="pj0601id_8" id="pj0601id_8_3"
+									value="455A39F93FF64B568B76B1DE18F60A1D" > 一般
+							<input type="hidden" name="pj0601fz_8_455A39F93FF64B568B76B1DE18F60A1D" value="4.8">
+						
+							<input type="radio" name="pj0601id_8" id="pj0601id_8_4"
+									value="0C71203DDBE54877AD0D87A1E36C660F" > 不符合
+							<input type="hidden" name="pj0601fz_8_0C71203DDBE54877AD0D87A1E36C660F" value="3.2">
+						
+							<input type="radio" name="pj0601id_8" id="pj0601id_8_5"
+									value="AC843467825E49EDBD6890D3AA886D5E" > 极不符合
+							<input type="hidden" name="pj0601fz_8_AC843467825E49EDBD6890D3AA886D5E" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						注重过程考核，考核方法多样，侧重能力考核
+						<input type="hidden" name="pj06xh" value="4">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_4" id="pj0601id_4_1"
+									value="6E95CC278C0D4D97987B18F69244A87E" > 很符合
+							<input type="hidden" name="pj0601fz_4_6E95CC278C0D4D97987B18F69244A87E" value="8">
+						
+							<input type="radio" name="pj0601id_4" id="pj0601id_4_2"
+									value="792E7A7467FA42CE950231044A0BF389" > 较符合
+							<input type="hidden" name="pj0601fz_4_792E7A7467FA42CE950231044A0BF389" value="6.4">
+						
+							<input type="radio" name="pj0601id_4" id="pj0601id_4_3"
+									value="613B41EDDDBB4D8181E6F9399A7FF6C0" > 一般
+							<input type="hidden" name="pj0601fz_4_613B41EDDDBB4D8181E6F9399A7FF6C0" value="4.8">
+						
+							<input type="radio" name="pj0601id_4" id="pj0601id_4_4"
+									value="97AF365BA7C34CC0BE68786FD751EBA0" > 不符合
+							<input type="hidden" name="pj0601fz_4_97AF365BA7C34CC0BE68786FD751EBA0" value="3.2">
+						
+							<input type="radio" name="pj0601id_4" id="pj0601id_4_5"
+									value="01F0FA43F7AE4C359301A5565F4B08B4" > 极不符合
+							<input type="hidden" name="pj0601fz_4_01F0FA43F7AE4C359301A5565F4B08B4" value="1.6">
+						
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						比起其他教师，教师教学工作更有成效
+						<input type="hidden" name="pj06xh" value="1">
+					</td>
+					<td>
+						
+							<input type="radio" name="pj0601id_1" id="pj0601id_1_1"
+									value="43A184CB3A7E475AB32FCEC863505EC0" > 很符合
+							<input type="hidden" name="pj0601fz_1_43A184CB3A7E475AB32FCEC863505EC0" value="10">
+						
+							<input type="radio" name="pj0601id_1" id="pj0601id_1_2"
+									value="D712C951BB914168A85160DD3ABF010E" > 较符合
+							<input type="hidden" name="pj0601fz_1_D712C951BB914168A85160DD3ABF010E" value="8">
+						
+							<input type="radio" name="pj0601id_1" id="pj0601id_1_3"
+									value="C95E7E6E3F614F37A7DF521DB3E38730" > 一般
+							<input type="hidden" name="pj0601fz_1_C95E7E6E3F614F37A7DF521DB3E38730" value="6">
+						
+							<input type="radio" name="pj0601id_1" id="pj0601id_1_4"
+									value="EB2EBE6C8EA64DD29667FD0BAB9B634F" > 不符合
+							<input type="hidden" name="pj0601fz_1_EB2EBE6C8EA64DD29667FD0BAB9B634F" value="4">
+						
+							<input type="radio" name="pj0601id_1" id="pj0601id_1_5"
+									value="47FF923CD6D2452A96ED0418C699E980" > 极不符合
+							<input type="hidden" name="pj0601fz_1_47FF923CD6D2452A96ED0418C699E980" value="2">
+						
+					</td>
+				</tr>
+				
+			
+
+			
+		</table>
+		
+		<table width="100%" cellpadding="2" cellspacing="0">
+			<tr>
+				<td align="center" style="border: 0;">
+					
+						<input type="button" name="bc" id="bc" value="保  存" class="button" onclick="saveData(this,'0')" />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="button" name="tj" id="tj" value="提  交" class="button" onclick="saveData(this,'1')" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<input type="button" name="qx" id="qx" value="关 闭" class="button" onclick="window.close()" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+
+	<script language="javascript">
+		function saveData(obj, status) {
+			var pj06xhs = document.getElementsByName("pj06xh");
+			//逻辑问题，选择一个时，就可以通过，jun.l modified by 2013-12-19
+			/*
+			var flag = false;
+			for (i = 0; i < pj06xhs.length; i++) {
+				var pj0601s = document.getElementsByName("pj0601id_"+ pj06xhs[i].value);
+				for (j = 0; j < pj0601s.length; j++) {
+					if (pj0601s[j].checked) {
+						flag = true;
+						break;
+					}
+				}
+			}
+			*/
+			
+			var flag = true;
+			for (i = 0; i < pj06xhs.length; i++) {
+				if(jQuery("input[name='pj0601id_"+ pj06xhs[i].value+"']:checked").length == 0) {
+					flag = false;
+					break;
+				}
+			}
+			if (!flag) {
+				alert("评价的每项指标都必须选择!");
+				return false;
+			}
+			flag = false;
+			var minZb = 0;//取到最小指标数
+			for (i = 0; i < pj06xhs.length; i++) {
+				var pj0601s = document.getElementsByName("pj0601id_"+ pj06xhs[i].value);
+				minZb = pj0601s.length;
+				break;
+			}
+			
+			for(j = 0; j < minZb; j++) {
+				var _ind = 0;
+				for (i = 0; i < pj06xhs.length; i++) {
+					var pj0601s = document.getElementsByName("pj0601id_"+ pj06xhs[i].value);
+					if (j < pj0601s.length && pj0601s[j].checked) {
+						_ind++;
+					}
+				}
+			if (_ind == pj06xhs.length) {
+				flag = true;
+				break;
+			}
+		}
+		
+		if(flag){
+			alert("请不要选相同一项！");
+			return false;
+		}
+
+		if (status == "1") {
+			document.getElementById("issubmit").value = "1";
+		} else {
+			document.getElementById("issubmit").value = "0";
+		}
+		
+		if(status == "1" && !confirm("您是否确认提交当前评价,提交后不能修改！")) {
+
+		} else {
+			obj.disabled = true;
+			document.getElementById("Form1").submit();
+		}
+	}
+</script>
+</html>
