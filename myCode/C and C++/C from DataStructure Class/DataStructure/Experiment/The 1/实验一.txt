@@ -1,0 +1,164 @@
+1
+***************************
+
+  课程实验一 线性表实验
+
+***************************
+
+实验目的：
+
+1、掌握线性表的定义；
+
+2、掌握线性表的基本操作，如建立、查找、插入和删除等。
+
+实验内容：
+
+The StructureDesign:
+[home]:
+//1.Message Input
+    [MessageInput/cls]
+        1.Input
+        2.back
+        3.Student LinkList
+
+2.Student LinkList
+    [ListPrint/no cls]
+        1.StudentSelect
+            [StudentSelect]
+                1.Input Number
+                    [StudentMessage]
+                        1.Delete
+                        2.Modify
+                        3.up
+                        4.down
+                        5.back
+                2.back
+        2.StudentSort
+            [StudengSort]
+                1.Sort by name
+                2.Sort by Number
+                3.Sort by scores
+                4.back
+        3.StudentFind
+            [StudentFind]
+                1.Find by name
+                2.Find by Number
+                3.Find by scores
+                    [FindBack]
+                4.back
+
+3.End        
+
+Jump(before,after)
+end.return
+
+ 	Node n1;
+	strcpy(n1.item.name,"霍博一");
+	strcpy(n1.item.num,"922110800621");
+	strcpy(n1.item.price,"84");
+    Node n2;
+	strcpy(n2.item.name,"李思尧");
+	strcpy(n2.item.num,"922110800619");
+	strcpy(n2.item.price,"90");
+    Node n3;
+	strcpy(n3.item.name,"马天驰的自画像");
+	strcpy(n3.item.num,"922110800629");
+	strcpy(n3.item.price,"85");
+
+	AddNode_Head(&list,n1);
+	AddNode_Head(&list,n2);
+	AddNode_Head(&list,n3);
+    
+
+    //输入限制模块可改进
+    //加大功能分离的力度，比如功能模块，窗体模块实现完全独立
+    
+定义一个包含学生信息（学号，姓名，成绩）的的顺序表和链表，使其具有如下功能：
+
+(1) 根据指定学生个数，逐个输入学生信息；
+
+(2) 逐个显示学生表中所有学生的相关信息；
+
+(3) 根据姓名进行查找，返回此学生的学号和成绩；
+
+(4) 根据指定的位置可返回相应的学生信息（学号，姓名，成绩）；
+
+(5) 给定一个学生信息，插入到表中指定的位置；
+
+(6) 删除指定位置的学生记录；
+
+(7) 统计表中学生个数。
+
+ 
+
+实验提示：
+
+学生信息的定义：【供参考，如果必要，学生可以自行可以修改】
+
+typedef struct {
+
+    char no[15];   //15位学号
+
+    char name[32]; //姓名
+
+    int price;     //成绩
+
+}Student;
+
+ 
+
+顺序表的定义
+
+typedef  struct {
+
+  Student  *elem;     //指向数据元素的基地址
+
+  int  length;       //线性表的当前长度                                                           
+
+ }SqList；
+
+              
+
+链表的定义：
+
+typedef struct LNode{
+
+     Student   data;       //数据域
+
+     struct LNode  *next;   //指针域
+
+}LNode,*LinkList;  
+
+ 
+
+ 
+
+实验要求：
+
+(1) 程序要添加适当的注释，程序的书写要采用缩进格式。
+
+(2) 程序要具在一定的健壮性，即当输入数据非法时，程序也能适当地做出反应，如插入删除时指定的位置不对等等。
+
+(3) 程序要做到界面友好，在程序运行时用户可以根据相应的提示信息进行操作。
+
+(4) 代码可以参考课程提供的代码【需要做修改】。
+
+(5) 提交要求：
+
+a) 内容按实验报告提纲（见后附）组织，保持字体大小颜色一致。请直接以文字或者图片方式提交，不要用word pdf等文件方式提交。
+
+b) 每个代码(.c/.cpp  .h/.cpp ),直接以附件单独提交在本题后，不要压缩。
+
+c) 请勿抄袭！！
+
+附：实验报告提纲
+
+1. 实验目的和内容【可以加上自己的解读】；
+
+2. 算法实现流程【可附流程图】 ；
+
+3. 主要算法代码介绍【尽量以文本方式呈现】；
+
+4. 程序运行结果及分析【可以附上测试截图，一个或者多个】；
+
+5. 结论

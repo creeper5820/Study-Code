@@ -1,0 +1,212 @@
+课程实验二   栈和队列实验
+
+实验目的：
+
+1、掌握栈和队列的定义；
+2、掌握栈和队列的基本操作，如入栈、出栈、入队列、出队列等。
+
+实验内容：
+
+1. 请使用两个队列实现一个栈(队列使用课程提供的链队列增加了一个GetRear函数，见后附1，如果有需要可自行修改)，
+并支持普通栈的全部四种操作（push、gettop、pop 和 empty），要求实现这些操作的函数
+2. 使用构造出的栈操作函数将自己学号中的每一位数字(字母忽略)依次入栈后，再打印出所有能被3整除的数字。
+
+实验提示：
+始终保持其中一个队列保持空的状态
+
+pop操作：
+把数据从不为空的队头出来，再插入到另一队队尾，留下最后一个不插入，直接出队列就实现了出栈操作。【下一次出队列】
+
+gettop
+取栈顶元素就是获取队尾元素。
+
+其余操作：
+push,empty 请自行思考。
+
+ 
+
+
+
+实验要求：
+
+(1) 程序要添加适当的注释，程序的书写要采用缩进格式。
+
+(2) 程序要具在一定的健壮性，即当输入数据非法时，程序也能适当地做出反应等等。比如栈为空了继续Pop要提示。
+
+(3) 提交要求：
+
+a) 内容按实验报告提纲（见后附2）组织，保持字体大小颜色一致。请直接以文字或者图片方式提交，不要用word pdf等文件方式提交
+
+b) 每个代码(.c/.cpp  .h/.cpp ),直接以附件单独提交在本题后，不要压缩。
+
+c) 请勿抄袭！！
+
+ 
+
+ 
+
+附1：链队列代码
+
+ 
+
+#include <stdio.h>
+
+#include "LinkQueue.h"
+
+typedef int QElemType;
+
+typedef struct QNode{
+
+   QElemType   data;
+
+   struct QNode  *next;
+
+}QNode, *QueuePtr;
+
+ 
+
+typedef struct {
+
+   QueuePtr  front;
+
+   QueuePtr  rear;
+
+}LinkQueue; 
+
+//注意链队列是有个头结点的 像链表一样
+
+void PrintLinkQueue (LinkQueue Q)
+
+{
+
+  QNode *p=Q.front->next;
+
+  while(p)
+
+  {
+
+  printf("%d  ",p->data);
+
+  p=p->next;
+
+  }
+
+   
+
+ 
+
+}
+
+Status InitQueue (LinkQueue *pQ){
+
+   (*pQ).front=(*pQ).rear=(QueuePtr) malloc(sizeof(QNode));
+
+    if(!(*pQ).front) exit(OVERFLOW);
+
+    (*pQ).front->next=NULL;
+
+     return OK;
+
+}
+
+Status DestroyQueue (LinkQueue *pQ){
+
+   while((*pQ).front){
+
+      (*pQ).rear=(*pQ).front->next;
+
+      free((*pQ).front);
+
+      (*pQ).front=(*pQ).rear;   }   
+
+   return OK;
+
+}
+
+ 
+
+Status QueueEmpty (LinkQueue Q){
+
+    return (Q.front==Q.rear);                            
+
+ }
+
+Status GetHead (LinkQueue Q, QElemType *pe){
+
+   if(Q.front==Q.rear) return ERROR;
+
+   *pe=Q.front->next->data;
+
+   return OK;
+
+}
+
+Status GetRear (LinkQueue Q, QElemType *pe){
+
+   if(Q.front==Q.rear) return ERROR;
+
+   *pe=Q.rear->data;
+
+   return OK;
+
+}
+
+ 
+
+Status EnQueue(LinkQueue *pQ,QElemType e){
+
+    QueuePtr p=(QueuePtr)malloc(sizeof(QNode));
+
+    if(!p) exit(OVERFLOW);
+
+    p->data=e; p->next=NULL;
+
+    (*pQ).rear->next=p;
+
+    (*pQ).rear=p;
+
+    return OK;
+
+}
+
+ 
+
+Status DeQueue (LinkQueue *pQ, QElemType *pe){
+
+   QueuePtr p=(QueuePtr)malloc(sizeof(QNode));
+
+   if(!p) exit(OVERFLOW);
+
+   if((*pQ).front==(*pQ).rear)
+
+         return ERROR;
+
+   p=(*pQ).front->next;
+
+   *pe=p->data;
+
+   (*pQ).front->next=p->next;
+
+   if((*pQ).rear==p)
+
+          (*pQ).rear=(*pQ).front;
+
+   free(p);
+
+   return OK;
+
+}
+
+ 
+
+附2：实验报告提纲
+
+1. 实验目的和内容【可以加上自己的解读】；
+
+2. 算法实现流程【可附流程图】 ；
+
+3. 主要算法代码介绍【尽量以文本方式呈现，代码尽量使用队列提供的函数，不要试图直接操作队列中的内容】；
+
+4. 程序运行结果及分析【可以附上测试截图，一个或者多个】；
+
+5. 结论

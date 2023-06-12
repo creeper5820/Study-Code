@@ -1,0 +1,6 @@
+{
+    "telemetry.enableTelemetry": false,
+    "files.associations": {
+        "stdio.h": "c"
+    }
+}

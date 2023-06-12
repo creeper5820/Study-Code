@@ -1,0 +1,320 @@
+﻿学生管理与界面交互
+程序概述
+鉴于实验要求使用顺序表和链表，我编写了两个程序项目，其中顺序表仅为按点实现功能，而使用链表的程序拥有更加完善的功能和架构，在此实验报告我将侧重讲解后者的思路和功能实现。
+
+以下是要求实现的功能：
+
+    根据指定学生个数，逐个输入学生信息
+    逐个显示学生表中所有学生的相关信息
+    根据姓名进行查找，返回此学生的学号和成绩
+    根据指定的位置可返回相应的学生信息（学号，姓名，成绩）
+    给定一个学生信息，插入到表中指定的位置
+    删除指定位置的学生记录
+    统计表中学生个数
+
+我在实现这些功能的同时为程序添加了合理的用户交互界面，下面是该程序的交互界面结构：
+
+
+    [THE HOME]
+    1.Add Students
+        [THE MessageInput]
+        1.Add at head
+        2.Add at given ordinal
+        3.The StudentList
+        4.back
+        5.exit
+    2.Manage Students<br>
+        [Manage Student]
+        1.select a student
+        2.search students
+        3.back
+        4.exit
+    3.Print the Student List
+    4.Exit
+
+
+
+
+功能实现
+程序分为三个部分：
+
+    1.main.c
+    2.list.h/list.c
+    3.ui.h/ui.c
+
+其中，UI部分负责用户界面的显示与跳转，LIST部分实现对数据的操作，而MAIN则是程序的入口
+
+代码详解
+
+MAIN
+    #include"list.h"
+    #include"ui.h"
+
+    int main()
+    {
+        List list;
+        Initialize(&list);
+        HOME(&list);
+        DeleteList(&list);
+        return 0;
+    }
+
+这个部分简单明了，开始程序时申明一个作为主要储存空间的链表，并将其初始化，进入主窗体，从窗体跳出后释放空间结束程序
+
+UI
+
+    /*ui.h*/
+    #include<stdio.h>
+    #include"list.h"
+    #ifndef UI_H_
+    #define UI_H_
+
+    /*Windows*/
+    void Initialize(List *plist);
+    void HOME(List *plist);
+    void MessageInput(List *plist);
+    void StudentList(List *plist);
+    void StudentSelect(List *plist);
+    void StudentMessage(List *plist,Node *pnode);
+    void BackMessage(List *plist,BackList *pbacklist,Back *pback);
+    void StudentFind(List *plist);
+    void FindBack(List *plist,BackList* pbacklist);
+    void ResultsSelect(List *plist,BackList *pBackList);
+ 
+    /*Functions*/
+    void JumpPage(char page,List *plist);
+
+    #endif
+
+
+上述函数中每个函数代表一个窗体界面，通过JumpPage函数跳转，当一个窗体函数结束后，先返回JumpPage函数，再由JumpPage函数返回至上一个窗体函数，达到多级界面的跳转效果
+
+LIST
+
+    /*list.h*/
+    #include <stdlib.h>
+    #include <stdbool.h>
+    #include <stdio.h>
+    #include <dirent.h>
+    #ifndef _LIST_H_
+    #define _LIST_H_
+    #define MAX 50
+
+    struct student {
+        char name[MAX];
+        char num[MAX];
+        char price[MAX];};
+    typedef struct student Item;
+
+    struct node {
+        Item item;
+        struct node *next;};
+    typedef struct node Node;
+    typedef Node *List;
+
+    struct Address{
+        Node *p;
+        struct Address *next;};
+    typedef struct Address Back;
+    typedef Back *BackList;
+
+    bool EmptyJudge(const List *plist);
+    bool FullJudge();
+    void ListInitiallize(List *plist);
+    void InputItem(Node *pnode);
+    void AddNode_Head(List *plist,Node temp);
+    void AddNode_Specified(List *plist,Node temp,int N);
+    void DeleteList(const List *plist);
+    int CountNode(const List *plist);
+    int CountBack(const BackList *pbacklist);
+    void PrintList(const List *plist);
+    void PrintBack(BackList *pbacklist);
+    void ExchangeNode(Node *pnode_1,Node *pnode_2);
+    void DeleteNode(List *plist,Node *pnode);
+    void DeleteBack(BackList *pbacklist,Back *pback);
+    void AddBack(BackList *pbacklist,Node* pNode);
+    BackList NodeFind(const List *plist, const char *string,int n);
+    void PrintNode(Node *pnode);
+
+
+    #endif
+
+List部分负责声明相关数据类型和实现所有对链表的操作，用以UI文件调用，实现模块的分离，有利于后期的维护和改进
+
+
+运行展示
+添加学生
+
+ [THE HOME]
+1.Add Students
+2.Manage Students
+3.Print the Student List
+4.Exit
+>1
+
+[THE MessageInput]
+1.Add at head
+2.Add at given ordinal
+3.The StudentList
+4.back
+5.exit
+>>2
+Intput the ordinal you want to insert(-1 to stop)
+>1
+Input the name
+陈麒全
+Input the number
+922110800612
+Input the price
+98
+
+[THE MessageInput]
+1.Add at head
+2.Add at given ordinal
+3.The StudentList
+4.back
+5.exit
+>>3
+[1][Name]陈麒全
+    Num :922110800612
+    Price:98
+
+
+[THE MessageInput]
+1.Add at head
+2.Add at given ordinal
+3.The StudentList
+4.back
+5.exit
+>>
+
+
+
+搜索学生
+
+ [1][Name]霍博一
+    Num :922110800621
+    Price:96
+
+[2][Name]马天驰
+    Num :922110800629
+    Price:97
+
+[3][Name]陈麒全
+    Num :922110800612
+    Price:98
+
+[4][Name]李思尧
+    Num :922110800619
+    Price:99
+
+
+[Manage Student]
+1.select a student
+2.search students
+3.back
+4.exit
+>>2
+
+[The Student Search]
+1.Find by names
+2.Find by numbers
+3.Find by scores
+4.back
+5.exit
+>>2
+Please input what you want to search
+922110800612
+[1][Name]陈麒全
+    Num :922110800612
+    Price:98
+
+
+[The Results]
+1.Select a student
+2.back
+3.exit
+>>1
+[The ordinal]
+>1
+
+[Name]陈麒全
+    Num :922110800612
+    Price:98
+
+[Manage Student]
+1.the next student
+2.the last student
+3.Modify the message
+4.delete this student
+5.back
+6.exit
+>>1
+
+[Name]陈麒全
+    Num :922110800612
+    Price:98
+
+[Manage Student]
+1.the next student
+2.the last student
+3.Modify the message
+4.delete this student
+5.back
+6.exit
+
+
+
+删除搜索结果中的学生
+
+ [Name]陈麒全
+    Num :922110800612
+    Price:98
+
+[Manage Student]
+1.the next student
+2.the last student
+3.Modify the message
+4.delete this student
+5.back
+6.exit
+>>4
+NULL
+
+[The Results]
+1.Select a student
+2.back
+3.exit
+>>2
+
+[The Student Search]
+1.Find by names
+2.Find by numbers
+3.Find by scores
+4.back
+5.exit
+>>4
+[1][Name]霍博一
+    Num :922110800621
+    Price:96
+
+[2][Name]马天驰
+    Num :922110800629
+    Price:97
+
+[3][Name]李思尧
+    Num :922110800619
+    Price:99
+
+
+[Manage Student]
+1.select a student
+2.search students
+3.back
+4.exit
+>>
+
+
+
+改进
+代码各部分之间的关联还可以进一步降低，最好做到完全独立，只保留接口

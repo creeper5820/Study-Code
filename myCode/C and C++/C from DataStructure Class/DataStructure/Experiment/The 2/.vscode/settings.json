@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "type_traits": "cpp",
+        "array": "c",
+        "string_view": "c",
+        "deque": "c",
+        "vector": "c",
+        "string": "cpp",
+        "stack.h": "c"
+    }
+}
