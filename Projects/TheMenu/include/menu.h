@@ -1,43 +1,58 @@
 #pragma once
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
 
-//Customization
-typedef int Type_Data;
+#define Number_Selection_Max 5
+#define Number_Function_Max 10
+#define LOG(x) printf("%s", x)
 
-
-
-//Const Number in Menu
-#define MaxNum_Function 10
-
-//the Menu struct
-struct Menu{
-
+struct Menu
+{
     char *Name_Menu;
-    char *Information;
 
-    int    Num_Submenu;
-    int    Num_Function;
-    struct Menu *List_Submenu;
-    struct Menu *Ptr_NextMenu;
-    struct Menu *Ptr_LastMenu;
+    char *Message;
 
-    void (*Function[MaxNum_Function])(Type_Data);
-    char *Name_Function[MaxNum_Function];
+    int Number_Selection;
+    char *Name_Selection[Number_Selection_Max];
+    int Number_Function[Number_Selection_Max];
+    int Num_Function[Number_Selection_Max];
 };
 typedef struct Menu Menu;
 
-//Global Varible
-Menu *Ptr_MainMenu;
-Type_Data Global_Data;
 
-//Global Function
-void Loop_Menu();
-Menu New_Menu(char *Name_Menu,char *Information);
-void Connect_Menu(Menu *Ptr_MainMenu,Menu *Ptr_SubMenu);
-void Connect_Function(Menu *Ptr_Menu,void (*Ptr_Function)(void));
-void Show_MainMenu(Menu *Ptr_MainMenu);
-void Enter_Submenu(Menu *List_Submenu,int Num);
+/*The Tree*/
+struct Node
+{
+    Menu *pMenu;
+    int Current_Selection;
+    
+    struct Node *Next[Number_Selection_Max];
+    struct Node *Last;
+};
+typedef struct Node Node;
+typedef Node *ListMenu;
+
+Node *New_Node();
+void Connect_Node(Node *Main_Node, Node *Sub_Node, int Number_Next);
+
+/*The Tree END*/
+
+
+Node *Current_pNode;
+
+
+//Menu Function
+void Set_Name(Node *pNode, char *name);
+void Set_Message(Node *pNode, char *message);
+void Set_Selection(Node *pNode, char *pString, int Number_Selection, int Number_Function, int Num_Function);
+void Set_Number_Selection(Node *pNode, int num);
+
+
+void Init();
 void Clear();
-int Input_Num();
+void flush();
+void Function();
+void Loop();

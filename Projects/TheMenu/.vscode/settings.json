@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "menu.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "typeinfo": "c",
+        "atomic": "c",
+        "cmath": "c"
     }
 }
