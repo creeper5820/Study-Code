@@ -7,8 +7,6 @@
 
 #define Number_Selection_Max 5
 
-#define LOG(x) printf("%s", x)
-
 struct Menu
 {
     char *Name_Menu;

@@ -6,7 +6,7 @@ Node *New_Node()
 
     for (int i = 0; i < Number_Selection_Max; i++)
     {
-        temp->Next[i] = 0;
+        temp->Next[i] = NULL;
     }
     temp->Current_Selection = 0;
 
@@ -36,7 +36,7 @@ void Set_Name(Node *pNode, char *name)
     if (pNode->pMenu->Name_Menu != NULL)
         free(pNode->pMenu->Name_Menu);
 
-    char *temp = (char *)malloc(sizeof(name));
+    char *temp = (char *)malloc(strlen(name) + 1);
     pNode->pMenu->Name_Menu = temp;
     strcpy(pNode->pMenu->Name_Menu, name);
 }
@@ -46,7 +46,7 @@ void Set_Message(Node *pNode, char *message)
     if (pNode->pMenu->Message != NULL)
         free(pNode->pMenu->Message);
 
-    char *temp = (char *)malloc(sizeof(message));
+    char *temp = (char *)malloc(strlen(message) + 1);
     pNode->pMenu->Message = temp;
     strcpy(pNode->pMenu->Message, message);
 }
@@ -56,10 +56,10 @@ void Set_Selection(Node *pNode, char *pString, int Number_Selection, int Number_
     if (pNode->pMenu->Name_Selection[Number_Selection] != NULL)
         free(pNode->pMenu->Name_Selection[Number_Selection]);
 
-    char *temp = (char *)malloc(sizeof(pString));
+    char *temp = (char *)malloc(strlen(pString) + 1);
     pNode->pMenu->Name_Selection[Number_Selection] = temp;
+    
     strcpy(pNode->pMenu->Name_Selection[Number_Selection], pString);
-
     pNode->pMenu->Number_Function[Number_Selection] = Number_Function;
     pNode->pMenu->Num_Function[Number_Selection] = Num_Function;
 }
@@ -85,7 +85,7 @@ void flush()
 
     if (Current_pNode == NULL)
     {
-        LOG("\033[0;31mNULL\033[0m");
+        printf("\033[0;31mNULL\033[0m");
         return;
     }
     printf("%s\n%s\n", Current_pNode->pMenu->Name_Menu, Current_pNode->pMenu->Message);
@@ -121,7 +121,7 @@ void Function()
     case 3:
     {
         Clear();
-        printf("\033[0;31m你在干什么!!!!\033[0m");
+        printf("\033[0;31mOHHHHHHHHH!!!\033[0m");
         getch();
     }
     default:
