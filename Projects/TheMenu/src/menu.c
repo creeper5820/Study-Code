@@ -31,14 +31,6 @@ void Connect_Node(Node *Main_Node, Node *Sub_Node, int Number_Next)
     Sub_Node->Last = Main_Node;
 }
 
-
-
-
-
-
-
-
-
 void Set_Name(Node *pNode, char *name)
 {
     if (pNode->pMenu->Name_Menu != NULL)
@@ -77,15 +69,6 @@ void Set_Number_Selection(Node *pNode, int num)
     pNode->pMenu->Number_Selection = num;
 }
 
-
-
-
-
-
-
-
-
-
 void Init()
 {
     Current_pNode = NULL;
@@ -118,29 +101,33 @@ void flush()
 
 void Function()
 {
-    switch(Current_pNode->pMenu->Number_Function[Current_pNode->Current_Selection])
+    switch (Current_pNode->pMenu->Number_Function[Current_pNode->Current_Selection])
     {
-        case 0:
-        {
-            exit(1);
-            break;
-        }
-        case 1:
-        {
-            Current_pNode = Current_pNode->Next[Current_pNode->pMenu->Num_Function[Current_pNode->Current_Selection]];
-            break;
-        }
-        case 2:
-        {
-            Current_pNode = Current_pNode->Last;
-            break;
-        }
-        default:
-        {
-            break;
-        }
-        
-        
+    case 0:
+    {
+        exit(1);
+        break;
+    }
+    case 1:
+    {
+        Current_pNode = Current_pNode->Next[Current_pNode->pMenu->Num_Function[Current_pNode->Current_Selection]];
+        break;
+    }
+    case 2:
+    {
+        Current_pNode = Current_pNode->Last;
+        break;
+    }
+    case 3:
+    {
+        Clear();
+        printf("\033[0;31m你在干什么!!!!\033[0m");
+        getch();
+    }
+    default:
+    {
+        break;
+    }
     }
 }
 

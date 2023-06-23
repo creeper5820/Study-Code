@@ -4,6 +4,8 @@
         "stdio.h": "c",
         "typeinfo": "c",
         "atomic": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "string.h": "c",
+        "stdlib.h": "c"
     }
 }

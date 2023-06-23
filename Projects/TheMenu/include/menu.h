@@ -44,15 +44,17 @@ void Connect_Node(Node *Main_Node, Node *Sub_Node, int Number_Next);
 Node *Current_pNode;
 
 
-//Menu Function
+/*Menu Initiallize*/
 void Set_Name(Node *pNode, char *name);
 void Set_Message(Node *pNode, char *message);
 void Set_Selection(Node *pNode, char *pString, int Number_Selection, int Number_Function, int Num_Function);
 void Set_Number_Selection(Node *pNode, int num);
 
-
+/*Some Function*/
 void Init();
-void Clear();
-void flush();
-void Function();
+void Clear();/*Modify this to adapt different terminals*/
+void flush();/*Modify this to adapt different terminals*/
+void Function();/*Modify this to add your function*/
+
+/*The main process*/
 void Loop();
