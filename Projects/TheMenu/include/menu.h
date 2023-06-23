@@ -6,7 +6,7 @@
 #include <conio.h>
 
 #define Number_Selection_Max 5
-#define Number_Function_Max 10
+
 #define LOG(x) printf("%s", x)
 
 struct Menu

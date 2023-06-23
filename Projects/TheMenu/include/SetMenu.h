@@ -7,7 +7,7 @@
     Set_Selection(Main, "查看学生信息", 0, 1, 0);
     Set_Selection(Main, "查找学生信息", 1, 1, 1);
     Set_Selection(Main, "退出", 2, 0, 0);
-    Set_Selection(Main, "    ", 3, 3, 0);
+    Set_Selection(Main, "彩蛋", 3, 3, 0);
     
 
     Node *SubMain_1 = New_Node();
