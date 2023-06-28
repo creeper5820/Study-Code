@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "snake.h": "c",
+        "conio.h": "c"
+    }
+}
