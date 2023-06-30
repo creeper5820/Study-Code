@@ -219,9 +219,9 @@ void Refresh_Snake()
         u8g2.drawPixel(Candy[0]*2 -1, Candy[1]*2);
         u8g2.drawPixel(Candy[0]*2, Candy[1]*2 -1);
 
-        //char Score[5];
-        //std::sprintf(Score, "%d", Length);
-        //u8g2.drawStr(80, 30, Score);
+        char Score[5];
+        std::sprintf(Score, "%d", Length);
+        u8g2.drawStr(80, 15, Score);
 
     } while (u8g2.nextPage());
 }

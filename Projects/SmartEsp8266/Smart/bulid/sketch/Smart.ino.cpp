@@ -10,13 +10,6 @@
 #include "Menu.h"
 #include "Snake.h"
 
-#line 12 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\Smart.ino"
-void Function();
-#line 62 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\Smart.ino"
-void setup();
-#line 104 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\Smart.ino"
-void loop();
-#line 12 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\Smart.ino"
 void Function() /*Modify this to add your function*/
 {
   switch (Current_pNode->pMenu->Number_Function[Current_pNode->Current_Selection])

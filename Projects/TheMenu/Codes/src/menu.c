@@ -79,7 +79,7 @@ void Clear()
     printf("\033[2J\033[1;1H");
 }
 
-void flush()
+void Refresh()
 {
     Clear();
 
@@ -135,7 +135,7 @@ void Loop()
 {
     while (1)
     {
-        flush();
+        Refresh();
 
         char c = getch();
         switch (c)

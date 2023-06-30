@@ -51,7 +51,7 @@ void Set_Number_Selection(Node *pNode, int num);
 /*Some Function*/
 void Init();
 void Clear();/*Modify this to adapt different terminals*/
-void flush();/*Modify this to adapt different terminals*/
+void Refresh();/*Modify this to adapt different terminals*/
 void Function();/*Modify this to add your function*/
 
 /*The main process*/
