@@ -1,0 +1,16 @@
+#line 1 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\bulid\\sketch\\.vscode\\settings.json"
+#line 1 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\.vscode\\settings.json"
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "ostream": "cpp",
+        "typeinfo": "c",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ranges": "cpp"
+    },
+    "arduino.ignoreBoards": [
+
+    ]
+}
