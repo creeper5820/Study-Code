@@ -19,7 +19,7 @@
             "includePath": [
                 "C:\\Users\\creeper\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\3.0.0\\tools\\sdk\\include",
                 "C:\\Users\\creeper\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\3.0.0\\tools\\sdk\\lwip2\\include",
-                "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\bulid\\core",
+                "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\bulid\\core",
                 "C:\\Users\\creeper\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\3.0.0\\cores\\esp8266",
                 "C:\\Users\\creeper\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\3.0.0\\variants\\nodemcu",
                 "C:\\Users\\creeper\\Documents\\Arduino\\libraries\\Keypad\\src",
@@ -360,7 +360,8 @@
                 "__ATOMIC_ACQ_REL=4",
                 "__ATOMIC_RELEASE=3",
                 "USBCON"
-            ]
+            ],
+            "compileCommands": "${workspaceFolder}/bulid/compile_commands.json"
         }
     ]
 }

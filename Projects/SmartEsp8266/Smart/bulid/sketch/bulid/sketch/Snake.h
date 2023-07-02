@@ -1,3 +1,4 @@
+#line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\bulid\\sketch\\Snake.h"
 #line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\Snake.h"
 #define AIR 0
 #define SNAKE 1

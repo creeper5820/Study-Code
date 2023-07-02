@@ -1,4 +1,4 @@
-#line 1 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\.vscode\\settings.json"
+#line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\.vscode\\settings.json"
 {
     "files.associations": {
         "*.tcc": "cpp",
@@ -7,7 +7,8 @@
         "array": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "cstddef": "cpp"
     },
     "arduino.ignoreBoards": [
 

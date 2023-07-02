@@ -1,3 +1,4 @@
+#line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\bulid\\sketch\\.vscode\\arduino.json"
 #line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\.vscode\\arduino.json"
 {
     "configuration": "xtal=80,vt=flash,exception=disabled,stacksmash=disabled,ssl=all,mmu=3232,non32xfer=fast,eesz=4M2M,led=2,ip=lm2f,dbg=Disabled,lvl=None____,wipe=none,baud=115200",

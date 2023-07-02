@@ -34,6 +34,7 @@ Node *New_Node()
     {
         temp->Next[i] = NULL;
     }
+    temp->Last = NULL;
     temp->Current_Selection = 0;
 
     Menu *temp_Menu = (Menu *)malloc(sizeof(Menu));
@@ -115,25 +116,35 @@ void Refresh() /*Modify this to adapt different terminals*/
         u8g2.drawStr(64, 32, "NULL");
         return;
     }
+
+    u8g2.setFont(u8g2_font_samim_16_t_all  );
     u8g2.setCursor(0, 15);
     u8g2.print(Current_pNode->pMenu->Name_Menu);
     //    u8g2.setCursor(0, 30);
     //    u8g2.print(Current_pNode->pMenu->Message);
-
-    for (int i = 0; i < Current_pNode->pMenu->Number_Selection; i++)
-    {
-        if (i == Current_pNode->Current_Selection)
-        {
-            // u8g2.drawFrame(1, (18 + i*15), strlen(Current_pNode->pMenu->Name_Selection[i])*9 + 1, 15);
-            // u8g2.setCursor(3, (30 + i*15));
-            // u8g2.print(Current_pNode->pMenu->Name_Selection[i]);
-
-            u8g2.drawButtonUTF8(3, (30 + i * 15), U8G2_BTN_INV | U8G2_BTN_BW2, 0, 1, 1, Current_pNode->pMenu->Name_Selection[i]);
-        }
-        else
-        {
-            u8g2.setCursor(3, (30 + i * 15));
-            u8g2.print(Current_pNode->pMenu->Name_Selection[i]);
-        }
+    if (Current_pNode->Current_Selection > 0)
+    {//The first line
+        u8g2.setFont(u8g2_font_t0_14_mf);
+        u8g2.setCursor(3, 30);
+        u8g2.print(Current_pNode->pMenu->Name_Selection[Current_pNode->Current_Selection - 1]);
     }
+    else
+    {
+        u8g2.setCursor(3, 30);
+        u8g2.print("---");
+    }
+    {//The Second line
+        u8g2.setFont(u8g2_font_samim_16_t_all);
+        u8g2.drawButtonUTF8(5, 45,
+                            U8G2_BTN_INV | U8G2_BTN_BW1,
+                            0, 0, 0,
+                            Current_pNode->pMenu->Name_Selection[Current_pNode->Current_Selection]);
+    }
+    if (Current_pNode->Current_Selection < Current_pNode->pMenu->Number_Selection)
+    {//The Third line
+        u8g2.setFont(u8g2_font_t0_14_mf);
+        u8g2.setCursor(3, 60);
+        u8g2.print(Current_pNode->pMenu->Name_Selection[Current_pNode->Current_Selection + 1]);
+    }
+    u8g2.setFont(u8g2_font_t0_14_mf);
 }

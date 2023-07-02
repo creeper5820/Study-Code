@@ -15,8 +15,7 @@
 #define SURVIVAL 0
 #define DEATH 1
 
-int Map[LENGTH][WIDTH];
-int Pixel[LENGTH][WIDTH];
+int Pixel[LENGTH][WIDTH] = {AIR};
 int Snake[LENGTH * WIDTH][2];
 int Candy[2];
 // The Status of Snake
@@ -32,7 +31,7 @@ void Init_Map()
         for (int j = 0; j < WIDTH; j++)
         {
             if (i == 0 || i == LENGTH - 1 || j == 0 || j == WIDTH - 1)
-                Map[j][i] = WALL;
+                Pixel[j][i] = WALL;
         }
 
     Status = SURVIVAL;
@@ -59,7 +58,7 @@ void Generate_Candy()
         srand((unsigned)time(NULL));
         X = 1 + rand() % (WIDTH - 2);
         Y = 1 + rand() % (LENGTH - 2);
-    } while (Map[X][Y] != AIR);
+    } while (Pixel[X][Y] != AIR);
 
     Candy[0] = X;
     Candy[1] = Y;
@@ -73,26 +72,26 @@ void Listen_Keyboard()
         Serial.println(key_snake);
         switch (key_snake)
         {
-        case 'U':
+        case '2':
             if (Snake[0][1] - 1 != Snake[1][1])
                 Direction = UP;
             break;
-        case 'D':
+        case '8':
             if (Snake[0][1] + 1 != Snake[1][1])
                 Direction = DOWN;
             break;
-        case 'L':
+        case '4':
             if (Snake[0][0] - 1 != Snake[1][0])
                 Direction = LEFT;
             break;
-        case 'R':
+        case '6':
             if (Snake[0][0] + 1 != Snake[1][0])
                 Direction = RIGHT;
             break;
-        case '1':
+        case 'A':
             Status = DEATH;
             break;
-        case '2':
+        case 'B':
             char ch = customKeypad.getKey();
             ch = 0;
             while (!ch)
@@ -107,12 +106,13 @@ void Listen_Keyboard()
 }
 void Load()
 {
-    //---- Load Map
+    memset(Pixel,AIR,sizeof(Pixel));
+    //Load Map
     for (int i = 0; i < LENGTH; i++)
         for (int j = 0; j < WIDTH; j++)
         {
-            Pixel[j][i] = AIR;
-            Pixel[j][i] = Map[j][i];
+            if (i == 0 || i == LENGTH - 1 || j == 0 || j == WIDTH - 1)
+                Pixel[j][i] = WALL;
         }
     // Load Snake
     for (int i = 0; i < Length; i++)
@@ -232,19 +232,19 @@ void Run_Snake()
     while (Status != DEATH)
     {
         delay(10);
-
         Listen_Keyboard();
 
         count++;
         if (count > Time_Sleep)
         {
+            Load();
             Action();
             count = 0;
 
             if (Status == DEATH)
             {
                 char ch_Death = customKeypad.getKey();
-
+                u8g2.clearBuffer();
                 while (!ch_Death)
                 {
                     u8g2.setCursor(5, 20);
@@ -255,8 +255,7 @@ void Run_Snake()
                 Status = SURVIVAL;
                 return;
             }
+            Refresh_Snake();
         }
-
-        Refresh_Snake();
     }
 }

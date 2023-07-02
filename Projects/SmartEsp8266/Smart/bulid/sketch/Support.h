@@ -1,14 +1,14 @@
-#line 1 "D:\\Git\\Code-Learning\\Projects\\SmartEsp8266\\Smart\\Support.h"
+#line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\Support.h"
 // the keypad
 const byte ROWS = 4;
 const byte COLS = 4;
 char keys[ROWS][COLS] = {
-    {'R', 'L', 'D', '0'},
-    {'2', '1', 'U', '0'},
-    {'0', '0', '0', '0'},
-    {'0', '0', '0', '0'}};
-byte rowPins[ROWS] = {12, 13, 3, 9};
-byte colPins[COLS] = {0, 2, 14, 15};
+    {'1', '2', '3', 'A'},
+    {'4', '5', '6', 'B'},
+    {'7', '8', '9', 'C'},
+    {'*', '0', '#', 'D'}};
+byte rowPins[ROWS] = {13, 12, 14, 2};
+byte colPins[COLS] = {0, 9, 10, 16};
 Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 

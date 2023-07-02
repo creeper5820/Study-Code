@@ -1,3 +1,4 @@
+#line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\bulid\\sketch\\Smart.ino.cpp"
 #line 1 "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\Smart.ino"
 #include <stdio.h>
 #include <string>

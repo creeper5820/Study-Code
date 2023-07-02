@@ -1,0 +1,2 @@
+-include "C:\\Users\\creeper\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\3.1.2\\cores\\esp8266\\CommonHFile.h"
+-include "D:\\Git\\CodeLearning\\Projects\\SmartEsp8266\\Smart\\bulid\\core\\Smart.ino.globals.h"

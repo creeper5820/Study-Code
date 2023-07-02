@@ -1,18 +1,34 @@
-#include <U8g2lib.h>
+#include <Keypad.h>
 
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0 ,U8X8_PIN_NONE);//实例化
 
-void setup() {
-  u8g2.begin();//初始化
-  u8g2.enableUTF8Print();
-  u8g2.setFont(u8g2_font_unifont_t_symbols);
+// the keypad
+const byte ROWS = 4;
+const byte COLS = 4;
+char keys[ROWS][COLS] = {
+    {'1', '2', '3', 'A'},
+    {'4', '5', '6', 'B'},
+    {'7', '8', '9', 'C'},
+    {'*', '0', '#', 'D'}};
+byte rowPins[ROWS] = {13, 12, 14, 2};
+byte colPins[COLS] = {0, 9, 10, 16};
+Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+
+
+
+void setup() 
+{
+  Serial.begin(9600);
+  Serial.println("Begin");
 }
 
-void loop() {
-  u8g2.firstPage();
-  do
-  {
-  u8g2.drawStr(0, 32, "drawTriangle");
-  u8g2.drawTriangle(14,32, 45,60, 9,42);  
-  }while(u8g2.nextPage());
+void loop() 
+{
+char key = customKeypad.getKey();
+
+    while (key)
+    {
+
+      Serial.println(key);
+      key = 0;
+    }
 }
