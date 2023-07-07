@@ -60,7 +60,7 @@ void Connect_Node(Node *Main_Node, Node *Sub_Node, int Number_Next)
 Node *Current_pNode;
 
 // Menu Initiallize
-void Set_Name(Node *pNode, char *name)
+void Set_Name(Node *pNode, const char *name)
 {
     if (pNode->pMenu->Name_Menu != NULL)
         free(pNode->pMenu->Name_Menu);
@@ -70,7 +70,7 @@ void Set_Name(Node *pNode, char *name)
     strcpy(pNode->pMenu->Name_Menu, name);
 }
 
-void Set_Message(Node *pNode, char *message)
+void Set_Message(Node *pNode, const char *message)
 {
     if (pNode->pMenu->Message != NULL)
         free(pNode->pMenu->Message);
@@ -80,7 +80,7 @@ void Set_Message(Node *pNode, char *message)
     strcpy(pNode->pMenu->Message, message);
 }
 
-void Set_Selection(Node *pNode, char *pString, int Number_Selection, int Number_Function, int Num_Function)
+void Set_Selection(Node *pNode, const char *pString, const int Number_Selection, const int Number_Function, const int Num_Function)
 {
     if (pNode->pMenu->Name_Selection[Number_Selection] != NULL)
         free(pNode->pMenu->Name_Selection[Number_Selection]);

@@ -173,6 +173,8 @@ void Action(ThisGame *pThisGame) {
   // Die
   if (pThisGame->snakeMap.Pixel[pThisGame->snake.Body[0][0]][pThisGame->snake.Body[0][1]] == WALL || pThisGame->snakeMap.Pixel[pThisGame->snake.Body[0][0]][pThisGame->snake.Body[0][1]] == SNAKE)
     pThisGame->snake.Status = DEATH;
+  Serial.print("The Status is");
+  Serial.println(pThisGame->snake.Status);
 }
 
 
@@ -236,8 +238,11 @@ void Run_Snake() {
   // Initiallize the game
   Init_Game(&Game);
 
+  Serial.println("The Game is initiallized successfully!");
   // Game loop
   Load(&Game);
+
+  Serial.println("The first initiallizing successfully!");
 
   int count = 0;
 
@@ -248,6 +253,8 @@ void Run_Snake() {
 
     count++;
     if (count > Time_Sleep) {
+
+      Serial.println("A loop of game");
 
       Load(&Game);
       Action(&Game);

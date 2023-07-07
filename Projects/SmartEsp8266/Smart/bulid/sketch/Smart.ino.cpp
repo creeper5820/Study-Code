@@ -30,8 +30,6 @@ void Function() /*Modify this to add your function*/
   }
   case 3:
   {
-    Init_Map();
-    Generate_Candy();
     Run_Snake();
     break;
   }
@@ -84,7 +82,7 @@ void setup()
       Set_Number_Selection(SubMain_1, 3);
       Set_Selection(SubMain_1, "Play now", 0, 3, 0);
       Set_Selection(SubMain_1, "Set Level", 1, 1, 0);
-      Set_Selection(SubMain_1, "back", 2, 2, 0);
+      Set_Selection(SubMain_1, "Highest Score", 2, 2, 0);
       {
         //  1.1.1.1
         Node *SubMain_1_1 = New_Node();

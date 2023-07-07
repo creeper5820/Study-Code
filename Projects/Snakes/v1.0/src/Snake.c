@@ -20,7 +20,7 @@ void Init_Map()
     Length = 3;
     Direction = LEFT;
     Level = 1;
-    Time_Sleep = 0.3;
+    Time_Sleep = 0.1;
 
     Snake[0][0] = WIDTH / 2 - 1;
     Snake[0][1] = LENGTH / 2;

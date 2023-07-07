@@ -11,71 +11,84 @@
 
 void Function() /*Modify this to add your function*/
 {
-  switch (Current_pNode->pMenu->Number_Function[Current_pNode->Current_Selection])
-  {
-  case 0:
-  {
-    break;
-  }
-  case 1:
-  {
-    Current_pNode = Current_pNode->Next[Current_pNode->pMenu->Num_Function[Current_pNode->Current_Selection]];
-    break;
-  }
-  case 2:
-  {
-    Current_pNode = Current_pNode->Last;
-    break;
-  }
-  case 3:
-  {
-    Init_Map();
-    Generate_Candy();
-    Run_Snake();
-    break;
-  }
-  case 4:
-  {
-    Time_Sleep = Current_pNode->pMenu->Num_Function[Current_pNode->Current_Selection];
-    char ch = customKeypad.getKey();
-    ch = 0;
-    while (!ch)
-    {
-      u8g2.firstPage();
-      do
+  switch (Current_pNode->pMenu->Number_Function[Current_pNode->Current_Selection]) {
+    case 0:
       {
-        u8g2.drawStr(0, 30, "OKKK!");
-        ch = customKeypad.getKey();
-        delay(10);
-      } while (u8g2.nextPage());
-    }
-    Current_pNode = Current_pNode->Last;
-    break;
-  }
-  default:
-  {
-    break;
-  }
+        break;
+      }
+    case 1:
+      {
+        Current_pNode = Current_pNode->Next[Current_pNode->pMenu->Num_Function[Current_pNode->Current_Selection]];
+        break;
+      }
+    case 2:
+      {
+        Current_pNode = Current_pNode->Last;
+        break;
+      }
+    case 3:
+      {
+        Run_Snake();
+        break;
+      }
+    case 4:
+      {
+        Time_Sleep = Current_pNode->pMenu->Num_Function[Current_pNode->Current_Selection];
+        char ch = customKeypad.getKey();
+        ch = 0;
+        while (!ch) {
+          u8g2.firstPage();
+          do {
+            u8g2.drawStr(0, 30, "OKKK!");
+            ch = customKeypad.getKey();
+            delay(10);
+          } while (u8g2.nextPage());
+        }
+        Current_pNode = Current_pNode->Last;
+        break;
+      }
+    case 5:
+      {
+        char ch_Score = customKeypad.getKey();
+        while (!ch_Score) {
+          u8g2.firstPage();
+          do {
+
+            ch_Score = customKeypad.getKey();
+            char Score[5];
+            std::sprintf(Score, "%d", HighestScore);
+            u8g2.drawStr(64, 32, Score);
+            delay(10);
+
+          } while (u8g2.nextPage());
+        }
+        break;
+      }
+    default:
+      {
+        break;
+      }
   }
 }
 
-void setup()
-{
+void setup() {
   Init();
 
   //  1
   Node *CreeperMain = New_Node();
   Set_Name(CreeperMain, "CREEPER'S BOX");
-  Set_Number_Selection(CreeperMain, 2);
+  Set_Number_Selection(CreeperMain, 3);
   Set_Selection(CreeperMain, "Games", 0, 1, 0);
-  Set_Selection(CreeperMain, "Myself", 1, 1, 1);
+  Set_Selection(CreeperMain, "Tools", 1, 0, 0);
+  Set_Selection(CreeperMain, "Myself", 2, 1, 1);
   {
     //  1.1
     Node *Main = New_Node();
     Set_Name(Main, "Game Box");
     Set_Number_Selection(Main, 2);
+    
     Set_Selection(Main, "Snakes", 0, 1, 0);
-    Set_Selection(Main, "exit", 1, 2, 0);
+    Set_Selection(Main, "back", 1, 2, 0);
     {
       //  1.1.1
       Node *SubMain_1 = New_Node();
@@ -83,7 +96,8 @@ void setup()
       Set_Number_Selection(SubMain_1, 3);
       Set_Selection(SubMain_1, "Play now", 0, 3, 0);
       Set_Selection(SubMain_1, "Set Level", 1, 1, 0);
-      Set_Selection(SubMain_1, "back", 2, 2, 0);
+      Set_Selection(SubMain_1, "Highest Score", 2, 5, 0);
+
       {
         //  1.1.1.1
         Node *SubMain_1_1 = New_Node();
@@ -119,51 +133,48 @@ void setup()
   u8g2.setFont(u8g2_font_t0_14_mf);
 
   u8g2.clearBuffer();
-  Init_Map();
-  Generate_Candy();
+
+  Serial.println("Setup Over");
 }
 
-void loop()
-{
+
+void loop() {
   u8g2.firstPage();
-  do
-  {
+  do {
     Refresh();
 
     char key = customKeypad.getKey();
 
-    while (key)
-    {
-      Serial.println(key);
-      switch (key)
-      {
-      case '2':
-      {
-        Current_pNode->Current_Selection--;
-        if (Current_pNode->Current_Selection + 1 < 1)
-          Current_pNode->Current_Selection = Current_pNode->pMenu->Number_Selection - 1;
-        break;
-      }
-      case '8':
-      {
-        Current_pNode->Current_Selection++;
-        if (Current_pNode->Current_Selection + 1 > Current_pNode->pMenu->Number_Selection)
-          Current_pNode->Current_Selection = 0;
-        break;
-      }
-      case '4':
+    while (key) {
+      Serial.print(key);
+      switch (key) {
+        case '2':
+          {
+            Current_pNode->Current_Selection--;
+            if (Current_pNode->Current_Selection + 1 < 1)
+              Current_pNode->Current_Selection = Current_pNode->pMenu->Number_Selection - 1;
+            break;
+          }
+        case '8':
+          {
+            Current_pNode->Current_Selection++;
+            if (Current_pNode->Current_Selection + 1 > Current_pNode->pMenu->Number_Selection)
+              Current_pNode->Current_Selection = 0;
+            break;
+          }
+        case '4':
 
-        break;
-      case '6':
+          break;
+        case '6':
 
-        break;
-      case 'A':
-        Function();
-        break;
-      case 'B':
-        if (Current_pNode->Last != NULL)
-          Current_pNode = Current_pNode->Last;
-        break;
+          break;
+        case 'A':
+          Function();
+          break;
+        case 'B':
+          if (Current_pNode->Last != NULL)
+            Current_pNode = Current_pNode->Last;
+          break;
       }
       delay(150);
       key = 0;
